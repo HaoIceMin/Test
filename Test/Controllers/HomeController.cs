@@ -46,7 +46,7 @@ namespace Test.Controllers
                 .FirstOrDefault();
             if (account == null)
             {
-                ViewBag.errMsg = "account not found";
+                ViewBag.errMsg = "account not found or password error";
                 return PartialView();
             }
 
