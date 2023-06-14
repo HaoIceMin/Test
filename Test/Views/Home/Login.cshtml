@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Home", new { ReturnUrl = Context.Request.Query["ReturnUrl"] }, FormMethod.Post, true, new { name = "myForm", autocomplete = "off" }))
+    {
+        <div>
+            <label>帳號：</label>@Html.TextBox("Account")
+        </div>
+        <div>
+            <label>密碼：</label>@Html.Password("pd")
+        </div>
+        <div>
+            <button type="submit">確定</button>
+        </div>
+        <div style="color:red;">
+            @ViewBag.errMsg
+        </div>
+    }
+</body>
+</html>
